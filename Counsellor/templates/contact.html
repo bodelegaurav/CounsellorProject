@@ -1,0 +1,84 @@
+{% extends 'base.html' %}
+{% block title %}Contact Us
+{% endblock title %}
+{% block body %}
+<div class="container my-3">
+
+
+<h1 class="party my-0">Contact the Counsellors</h1>
+<h3 class="text-center my" style="margin-bottom:40px">Feel like talking to someone, don't hesitate; go ahead</h3>
+
+<div align="center">
+<div class="card w-100 text-center my-2" style="background-color:red; color:white;">
+  <div class="card-body">
+    <h5 class="card-title">Cheers!!!</h5>
+    <p class="card-text">The counsellors are always ready to help you and are in New SAC building most of the day. Counselling services is available as below.</p>
+    <p class="card-text">Monday to Thursday 9.00 am to 7.30 pm, Friday and Saturday 9.00 am to 5.30 pm</p>
+    <p class="card-text">Sunday holiday.</p>
+    <p class="card-text">But the counsellors are always available on telephone or e-mail so please feel free to contact them.</p>
+  </div>
+</div>
+
+<div class="card w-75 text-center my-2" style="background-color:yellow;">
+  <div class="card-body">
+    <h5 class="card-title">PALLABITA B CHOWDHURY</h5>
+    <p class="card-text">Contact Information: Pallabita Barooah Chowdhury</p>
+    <p class="card-text">Contact: 0361-258-3989(O)</p>
+    <p class="card-text">Cell no: 9864154855 / 9435569998</p>
+    <p class="card-text">Webmail: pallabita.b.c@iitg.ernet.in</p>
+    <a href="/PallabitaC" class="btn btn-dark">More Info</a>
+  </div>
+</div>
+
+<div class="card w-50 text-center my-2" style="background-color:#228B22; color: white;">
+  <div class="card-body">
+    <h5 class="card-title">NAMRATA N. RYNJAH</h5>
+    <p class="card-text">Contact Information: Namrata Naomi Rynjah</p>
+    <p class="card-text">Phone no: 9863400016</p>
+    <p class="card-text">Landline no : (0361) 258 3987</p>
+    <p class="card-text">Email: namrata.r@iitg.ernet.in</p>
+    <a href="NamrataR" class="btn btn-dark">More Info</a>
+  </div>
+</div>
+
+<div class="card w-25 text-center my-2" style="background-color:blue; color: white;">
+  <div class="card-body">
+    <h5 class="card-title">MR. RAKESH KAKATI</h5>
+    <p class="card-text">Contact info: Rakesh Kakati</p>
+    <p class="card-text">Email: rkakati@iitg.ernet.in</p>
+    <p class="card-text">Office tel: 0361-2583988</p>
+    <p class="card-text">Mobile: 9707222941</p>
+    <a href="/RakeshKakati" class="btn btn-dark">More Info</a>
+  </div>
+</div>
+
+</div>
+
+<h3>You are free to share anything you want to share with us, feel free.</h3>
+
+<form action="/contact" method="post">
+{% csrf_token %}
+
+
+
+  <div class="mb-3 form-group">
+    <label for="name" class="form-label">Name</label>
+    <input type="text" class="form-control" name="name" id="name" required>
+  </div>
+  <div class="mb-3 form-group">
+    <label for="email" class="form-label">Email address</label>
+    <input type="email" class="form-control" name="email" id="email" aria-describedby="email" required>
+    <div id="emailhh" class="form-text">We'll never share your email with anyone else.</div>
+  </div>
+  <div class="mb-3 form-group">
+    <label for="phone" class="form-label">Counsellor's Email address</label>
+    <input type="email" class="form-control" name="phone" id="phone" aria-describedby="phone" required>
+  </div>
+  <div class="mb-3 form-group">
+    <label for="content" class="form-label">How may we help you</label>
+    <textarea name="content" id="content" name="content" class="form-control" cols="30" rows="10"></textarea>
+  </div>
+  <button type="submit" class="btn btn-primary my-2">Submit</button>
+</form>
+</div>
+{% endblock body %}
